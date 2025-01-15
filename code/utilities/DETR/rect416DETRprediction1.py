@@ -71,7 +71,7 @@ model = torch.hub.load('facebookresearch/detr',
                       num_classes=5)
 model = model.to(device)  # Move model to the device
 
-checkpoint = torch.load('/Users/tesutoyoukanrisha/慈恵データ/fastaudiogramdetection/weights/audiogramdetr_checkpoint0499.pth', map_location=device)
+checkpoint = torch.load('../data/models/rect416DETR_audiogramdetr_checkpoint0499.pth', map_location=device)
 model.load_state_dict(checkpoint['model'], strict=False)
 model.eval()
 
